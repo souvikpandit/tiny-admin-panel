@@ -1,0 +1,46 @@
+.sticky {
+  position: sticky;
+  top: 0px;
+}
+
+.editable-buttons>.btn-default {
+  color: #ffffff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.removeprev {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  background: red;
+  color: #FFF;
+  border-radius: 100%;
+  padding: 0.08rem 0.55rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.removeprev2 {
+  position: absolute;
+  top: -0.6rem;
+  right: -0.1rem;
+  background: red;
+  color: #FFF;
+  border-radius: 100%;
+  padding: 0.1rem 0.55rem;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.removeprev3 {
+  position: absolute;
+  top: 105px;
+  right: 0.2rem;
+  background: red;
+  color: #FFF;
+  border-radius: 100%;
+  padding: 0.1rem 0.55rem;
+  font-size: .8rem;
+  font-weight: 700;
+}
