@@ -65,19 +65,5 @@ class BannerController extends Controller
         Post::whereIn('id',explode(",",$ids))->delete();
         return response()->json(['success'=>"Banner Deleted successfully."]);
     }
-    public function sortBanner(Request $request)
-    {
-        //return $request;
-        $banners = Post::where('post_type','banner')->get();
-        
-        foreach ($banners as $banner) {
-            foreach ($request->bnr_list as $bnr) {
-                //return $bnr['id'];
-                if ($bnr['id'] == $banner->id) {
-                    $banner->update(['sorting_no' => $bnr['position']]);
-                }
-            }
-        }
-        return response('Update Successfully.', 200);
-    }
+    
 }

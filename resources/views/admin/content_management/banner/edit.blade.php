@@ -18,7 +18,7 @@
                 <div class="tile mb30">
                     <div class="tile-title-w-btn">
                         <div class="title">
-                            <h3><i class="fe fe-24 fe-image"></i> Add Banner</h3>
+                            <h3><i class="fe fe-24 fe-image"></i> Edit Banner</h3>
                         </div>
                         <p>
                             <a href="{{ route('banner') }}" class="btn btn-primary btn-oval trigger-button"><i class="lni-list"></i> All</a>
