@@ -87,11 +87,11 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="testimonials">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="ui-color.php"><span class="ml-1 item-text">All</span>
+                  <a class="nav-link pl-3" href="{{ route('testimonial') }}"><span class="ml-1 item-text">All</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="ui-typograpy.php"><span class="ml-1 item-text">Add</span></a>
+                  <a class="nav-link pl-3" href="{{ route('testimonial.add') }}"><span class="ml-1 item-text">Add</span></a>
             </li>
           </ul>
           

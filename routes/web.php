@@ -6,6 +6,7 @@ use App\Http\Controllers\admin\content_management\PageController;
 use App\Http\Controllers\admin\content_management\MediaController;
 use App\Http\Controllers\admin\content_management\BannerController;
 use App\Http\Controllers\admin\content_management\SiteSettingController;
+use App\Http\Controllers\admin\content_management\TestimonialController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -66,6 +67,14 @@ Route::get('/demo', function () {
         Route::post('/banner/delete/{id}', [BannerController::class, 'destroy'])->name('banner.destroy');
         Route::delete('/bannerDeleteAll',[BannerController::class, 'alldelete'])->name('bannerDeleteAll');
         Route::post('/sort/banner', [BannerController::class, 'sortBanner'])->name('sortBanner');
+        /*Testimonials */
+        Route::get('/testimonial',[TestimonialController::class, 'index'])->name('testimonial');
+        Route::get('/testimonial/add',[TestimonialController::class, 'create'])->name('testimonial.add');
+        Route::get('/testimonial/edit/{id}',[TestimonialController::class, 'edit'])->name('testimonial.edit');
+        Route::post('/testimonial/update',[TestimonialController::class, 'update'])->name('testimonial.update');
+        Route::post('/testimonial/delete/{id}', [TestimonialController::class, 'destroy'])->name('testimonial.destroy');
+        Route::delete('/testimonialDeleteAll',[TestimonialController::class, 'alldelete'])->name('testimonialDeleteAll');
+        Route::post('/sort/testimonial', [TestimonialController::class, 'sorttestimonial'])->name('sorttestimonial');
     
         /* CMS */
 
