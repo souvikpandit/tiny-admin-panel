@@ -66,7 +66,7 @@ Route::get('/demo', function () {
         Route::post('/banner/update',[BannerController::class, 'update'])->name('banner.update');
         Route::post('/banner/delete/{id}', [BannerController::class, 'destroy'])->name('banner.destroy');
         Route::delete('/bannerDeleteAll',[BannerController::class, 'alldelete'])->name('bannerDeleteAll');
-        Route::post('/sort/banner', [BannerController::class, 'sortBanner'])->name('sortBanner');
+        
         /*Testimonials */
         Route::get('/testimonial',[TestimonialController::class, 'index'])->name('testimonial');
         Route::get('/testimonial/add',[TestimonialController::class, 'create'])->name('testimonial.add');
@@ -74,7 +74,7 @@ Route::get('/demo', function () {
         Route::post('/testimonial/update',[TestimonialController::class, 'update'])->name('testimonial.update');
         Route::post('/testimonial/delete/{id}', [TestimonialController::class, 'destroy'])->name('testimonial.destroy');
         Route::delete('/testimonialDeleteAll',[TestimonialController::class, 'alldelete'])->name('testimonialDeleteAll');
-        Route::post('/sort/testimonial', [TestimonialController::class, 'sorttestimonial'])->name('sorttestimonial');
+        
     
         /* CMS */
 
@@ -84,5 +84,6 @@ Route::get('/demo', function () {
 /* Post and Post Meta Routing */
     Route::post('/post/store',[GeneralController::class, 'store'])->name('post.store');
     Route::post('/post/update/{id}', [GeneralController::class,'update'])->name('post.update');
+    Route::post('/sort/element', [GeneralController::class, 'sortElement'])->name('sortElement');
 });
 require __DIR__.'/auth.php';

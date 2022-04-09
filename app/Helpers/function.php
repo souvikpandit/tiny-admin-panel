@@ -2,6 +2,8 @@
 
 use App\Models\admin\Media;
 use App\Models\admin\SiteSettings;
+use Symfony\Component\HttpFoundation\Request;
+use App\Models\admin\Post;
 function settings(){
   //echo "Hi";
 $site_setting = SiteSettings::where('slug','site_settings')->first();
@@ -72,6 +74,7 @@ function notFound(){
         return response()
                 ->view('errors.404');
     }
+
 
 
 ?>

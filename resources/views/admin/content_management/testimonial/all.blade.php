@@ -127,10 +127,10 @@
 
     function updateOrder(data) {
         $.ajax({
-            url:"{{URL::to('/sort/testimonial')}}",
+            url:"{{URL::to('/sort/element')}}",
             type:'post',
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            data:{bnr_list:data},
+            data:{sort_list:data,post_type:'testimonial'},
             success:function(e){
                 //alert(e);
             }

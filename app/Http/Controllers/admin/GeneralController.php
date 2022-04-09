@@ -191,4 +191,19 @@ class GeneralController extends Controller
        }
         
     }
+    public function sortElement(Request $request)
+    {
+        //return $request;
+        $elements = Post::where('post_type',$request->post_type)->get();
+        
+        foreach ($elements as $element) {
+            foreach ($request->sort_list as $sort) {
+                //return $sort['id'];
+                if ($sort['id'] == $element->id) {
+                    $element->update(['sorting_no' => $sort['position']]);
+                }
+            }
+        }
+        return response('Update Successfully.', 200);
+    }
 }
