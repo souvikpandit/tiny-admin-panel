@@ -62,7 +62,7 @@
                                                 @php
                                                 $parent = App\Models\admin\Category::where('id',$category->parent_id)->first();
                                                 @endphp
-                                                {{ ($category->parent_id == 0) ? 'Uncatagorized' : $parent->name }} - 
+                                                {{ ($category->parent_id == 0) ? 'Root Category' : $parent->name }} - 
                                                 {{ $category->name }}  </option>
                                             @endforeach
     
