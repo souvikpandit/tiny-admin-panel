@@ -363,8 +363,8 @@ if(document.getElementById("parmalink")!=null){
             $(document).ready(function () {
              $("#title").keyup(function(){
                   var title = $(this).val().toLowerCase();
-                  var newString = title.replace(/[_\W]+/g, "-");
-                  
+                  //var newString = title.replace(/[_\W]+/g, "-");
+                  var newString = title.replace(/[\. ,/:-?!"';`~*$#@%^+=></]+/g, "-");
                   $("#slug").val(newString);
 
               })
