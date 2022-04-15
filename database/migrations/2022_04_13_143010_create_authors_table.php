@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name',256);
             $table->string('slug',256);
             $table->string('designation',256);
-            $table->string('image')->nullable();
+            $table->string('image')->nullable()->nullable();
             $table->boolean('status')->nullable()->default(true);
             $table->longText('author_meta')->nullable();
             $table->timestamps();

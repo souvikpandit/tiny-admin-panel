@@ -35,6 +35,7 @@
                                     <label for="inputSearch">Category Name</label>
                                     <input type="text" class="form-control mb-2" name="name" id="title" placeholder="Enter Category" >
                                     <input type="hidden" name="parent_slug" id="parent_slug">
+                                    <input type="hidden" name="type" value="blog">
                                 </div>
                             </div>
                             <div class="col-md-12">

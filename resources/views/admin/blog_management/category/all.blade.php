@@ -18,7 +18,7 @@
                   </div>
                   @include('includes.message')
                   <ul class="list-inline">
-                      <li class="list-inline-item"><button class="btn btn-danger btn-oval delete_all" data-url="{{ route('categoryDeleteAll') }}"><i class="feather icon-trash"></i> Bulk Delete</button></li>
+                      {{--  <li class="list-inline-item"><button class="btn btn-danger btn-oval delete_all" data-url="{{ route('categoryDeleteAll') }}"><i class="feather icon-trash"></i> Bulk Delete</button></li>  --}}
                       <li class="list-inline-item"><a href="{{ route('category.create') }}" class="btn btn-primary btn-oval trigger-button"><i class="lni-plus"></i> Add New</a></li>
                   </ul>
               </div>
@@ -30,7 +30,7 @@
                           <thead class="bg-danger">
                               <tr class="text-danger">
                                 <th>SN</th>
-                                  <th style="width:5%"><input type="checkbox" id="master"></th>
+                                  {{--  <th style="width:5%"><input type="checkbox" id="master"></th>  --}}
                                   <th>Image</th>
                                   <th>Name</th>
                                   <th>Parent category</th>
@@ -44,9 +44,9 @@
                             @foreach ($categories as $category)
                               <tr id="tr_{{$category->id}}" data-id="{{$category->id}}">
                                 <td>{{ $loop->iteration }}</td>
-                                  <td>
+                                  {{--  <td>
                                     <input type="checkbox" class="sub_chk" data-id="{{$category->id}}">
-                                  </td>
+                                  </td>  --}}
                                   <td><img src="{{ asset(GetImageUrl($category->image)) }}" alt="" style="width:50px"></td>
                                   <td>{{$category->name}}</td>
                                   <td>
@@ -75,11 +75,11 @@
                                       <a class="btn btn-sm btn-warning" href="{{ route('category.edit',$category->id) }}"><i class="feather icon-edit"></i> Edit</a>
                                       
                                       
-                                      <form id="delete-form-{{$category->id}}" method="POST" action="{{ route('category.destroy',$category->id) }}" style="display: none">
+                                      {{--  <form id="delete-form-{{$category->id}}" method="POST" action="{{ route('category.destroy',$category->id) }}" style="display: none">
                                         @csrf
                                         @method('delete')
                                       </form>
-                                      <a class="btn btn-sm btn-danger" href="" onclick="if(confirm('You Want to Delete This ?')){event.preventDefault();document.getElementById('delete-form-{{$category->id}}').submit();}else{event.preventDefault();}"><i class="feather icon-trash"></i> Delete</a>
+                                      <a class="btn btn-sm btn-danger" href="" onclick="if(confirm('You Want to Delete This ?')){event.preventDefault();document.getElementById('delete-form-{{$category->id}}').submit();}else{event.preventDefault();}"><i class="feather icon-trash"></i> Delete</a>  --}}
                                       
                                   </td>
                                 
