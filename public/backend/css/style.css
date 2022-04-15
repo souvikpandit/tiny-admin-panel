@@ -44,3 +44,19 @@
   font-size: .8rem;
   font-weight: 700;
 }
+
+.dataTables_filter {
+  float: right;
+}
+
+.dataTables_paginate {
+  float: right;
+}
+
+.table thead th {
+  color: #ffffff !important;
+}
+
+.table thead {
+  background-color: #17a2b8 !important;
+}

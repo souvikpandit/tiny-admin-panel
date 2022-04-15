@@ -4,8 +4,9 @@ namespace App\Http\Controllers\admin\blog_management;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\admin\Tag;
 
-class BlogCommentController extends Controller
+class TagController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,9 @@ class BlogCommentController extends Controller
      */
     public function index()
     {
-        //
+        $tags = Tag::all()->sortByDesc('created_at');
+        
+        return view('admin.blog_management.tag.all',compact('tags'));
     }
 
     /**
@@ -24,7 +27,7 @@ class BlogCommentController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.blog_management.tag.add');
     }
 
     /**
@@ -35,7 +38,14 @@ class BlogCommentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tag = new Tag;
+        $tag->name = $request->name;
+        $tag->slug = $request->slug;
+        $tag->image = $request->image;
+        $tag->status = $request->status;
+
+        $tag->save();
+        return redirect(route('tag.index'))->with('message', 'Successfully Added!');
     }
 
     /**
@@ -57,7 +67,8 @@ class BlogCommentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tag = Tag::where('id',$id)->first();
+        return view('admin.blog_management.tag.edit',compact('tag'));
     }
 
     /**
@@ -69,7 +80,14 @@ class BlogCommentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tag = Tag::find($id);
+        $tag->name = $request->name;
+        $tag->slug = $request->slug;
+        $tag->image = $request->image;
+        $tag->status = $request->status;
+
+        $tag->save();
+        return redirect(route('tag.index'))->with('message', 'Successfully Updated!');
     }
 
     /**
@@ -80,6 +98,15 @@ class BlogCommentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Tag::where('id',$id)->delete();
+        return redirect(route('tag.index'))->with('msg', 'Successfully Deleted!');
+    }
+
+    public function alldelete(Request $request)
+    {
+        //return $request;
+        $ids = $request->ids;
+        Tag::whereIn('id',explode(",",$ids))->delete();
+        return response()->json(['success'=>"Tag Deleted successfully."]);
     }
 }
