@@ -34,6 +34,7 @@
                                     <div class="form-group">
                                         <label for="inputSearch">Blog Name</label>
                                         <input type="text" class="form-control mb-2" name="title" id="title" placeholder="Enter Blog Name" >
+                                        
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -233,6 +234,9 @@
             },
             author: {
                 required: true,
+            },
+            image: {
+                required: true,
             }
         },
         messages: {
@@ -250,6 +254,9 @@
             },
             author: {
                 required: "Please select an author.",
+            },
+            image: {
+                required: "Please select an image.",
             }
         },
         errorClass: 'text-danger',

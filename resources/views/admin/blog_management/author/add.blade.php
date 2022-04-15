@@ -46,7 +46,8 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="inputSearch">Author Designation</label>
-                                    <input type="text" class="form-control mb-2" name="designation" placeholder="Enter Author Designation" >
+                                    <textarea class="form-control mb-2 editor" name="designation"></textarea>
+                                    
                                 </div>
                             </div>
                         </div>

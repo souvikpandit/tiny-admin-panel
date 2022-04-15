@@ -270,6 +270,9 @@
             },
             author: {
                 required: true,
+            },
+            image: {
+                required: true,
             }
         },
         messages: {
@@ -287,6 +290,9 @@
             },
             author: {
                 required: "Please select an author.",
+            },
+            image: {
+                required: "Please select an image.",
             }
         },
         errorClass: 'text-danger',

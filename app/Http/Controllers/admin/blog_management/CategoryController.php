@@ -43,7 +43,7 @@ class CategoryController extends Controller
         $category = new Category;
         
         $category->image = $request->image;
-        
+        $category->type = $request->type;
         $category->parent_id = $request->parent_category;
         $category->name = $request->name;
         if($request->parent_slug){
@@ -99,7 +99,7 @@ class CategoryController extends Controller
         // var_dump($category->parent_id);
 
         $category->image = $request->image;
-        
+        $category->type = $request->type;
         $category->name = $request->name;
         
         if((int)$request->parent_category != $category->parent_id){

@@ -211,13 +211,13 @@
           </ul>
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
-              <a href="#author" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+              <a href="#blog-author" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
                 <i class="fe fe-box fe-16"></i>
                 <span class="ml-3 item-text">Author</span>
               </a>
-              <ul class="collapse list-unstyled pl-4 w-100" id="author">
+              <ul class="collapse list-unstyled pl-4 w-100" id="blog-author">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="{{ route('tag.index') }}"><span class="ml-1 item-text">All</span>
+                  <a class="nav-link pl-3" href="{{ route('author.index') }}"><span class="ml-1 item-text">All</span>
                   </a>
                 </li>
                 <li class="nav-item">
