@@ -11,6 +11,7 @@ use App\Http\Controllers\admin\blog_management\BlogController;
 use App\Http\Controllers\admin\blog_management\CategoryController;
 use App\Http\Controllers\admin\blog_management\TagController;
 use App\Http\Controllers\admin\blog_management\AuthorController;
+use App\Http\Controllers\admin\book_management\BookCategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -83,7 +84,7 @@ Route::get('/demo', function () {
         Route::resource('blog', BlogController::class);
         Route::delete('/blogDeleteAll',[BlogController::class, 'alldelete'])->name('blogDeleteAll');
 
-        /* Category management */
+        /* Blog Category management */
         Route::resource('category', CategoryController::class);
         Route::delete('/categoryDeleteAll',[CategoryController::class, 'alldelete'])->name('categoryDeleteAll');
 
@@ -94,6 +95,10 @@ Route::get('/demo', function () {
         /* Author management */
         Route::resource('author', AuthorController::class);
         Route::delete('/authorDeleteAll',[AuthorController::class, 'alldelete'])->name('authorDeleteAll');
+
+        /* Book category management */
+        Route::resource('book-category', BookCategoryController::class);
+        Route::delete('/bookcategoryDeleteAll',[BookCategoryController::class, 'alldelete'])->name('bookDeleteAll');
         /* CMS */
 
 /* Admin Routing */

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin\book_management;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\admin\Category;
 
 class BookCategoryController extends Controller
 {
@@ -14,7 +15,9 @@ class BookCategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::where('type','book')->orderby('created_at','desc')->get();
+
+        return view('admin.book_management.category.all',compact('categories'));
     }
 
     /**
@@ -24,7 +27,9 @@ class BookCategoryController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::where([['status',1],['type','book']])->get();
+
+        return view('admin.book_management.category.add',compact('categories'));
     }
 
     /**
@@ -35,7 +40,23 @@ class BookCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category = new Category;
+        
+        $category->image = $request->image;
+        $category->type = $request->type;
+        $category->parent_id = $request->parent_category;
+        $category->name = $request->name;
+        if($request->parent_slug){
+        $slug = $request->parent_slug.'-'.$request->slug;
+        }
+        else{
+            $slug = $request->slug;
+        }
+        $category->slug = $slug;
+        $category->status = $request->status;
+
+        $category->save();
+        return redirect(route('book-category.index'))->with('message', 'Successfully Added!');
     }
 
     /**
@@ -57,7 +78,10 @@ class BookCategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cat = Category::where('id',$id)->first();
+        $categories = Category::where([['status',1],['type','book']])->get();
+        $parent_category = Category::where('parent_id',0)->get();
+        return view('admin.book_management.category.edit',compact('cat','categories','parent_category'));
     }
 
     /**
@@ -69,7 +93,31 @@ class BookCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //return $request;
+        $category = Category::find($id);
+        // var_dump( (int) $request->parent_category);
+        // var_dump($category->parent_id);
+
+        $category->image = $request->image;
+        $category->type = $request->type;
+        $category->name = $request->name;
+        
+        if((int)$request->parent_category != $category->parent_id){
+            //return "hi";
+            if($request->parent_category == 0){
+                $category->slug = slugify($request->name);
+            }
+            else{
+                $parent_cat = Category::find($request->parent_category);
+                $category->slug = $parent_cat->slug.'-'.slugify($request->name);
+            }
+            //$category->slug = $slug;
+        }
+        $category->parent_id = $request->parent_category;
+        $category->status = $request->status;
+
+        $category->save();
+        return redirect(route('book-category.index'))->with('message', 'Successfully Updated!');
     }
 
     /**
@@ -80,6 +128,15 @@ class BookCategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Category::where('id',$id)->delete();
+        return redirect(route('book-category.index'))->with('msg', 'Successfully Deleted!');
+    }
+
+    public function alldelete(Request $request)
+    {
+        //return $request;
+        $ids = $request->ids;
+        Category::whereIn('id',explode(",",$ids))->delete();
+        return response()->json(['success'=>"Category Deleted successfully."]);
     }
 }
