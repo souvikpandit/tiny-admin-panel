@@ -49,7 +49,7 @@
                                   <td><img src="{{ asset(GetImageUrl($tag->image)) }}" alt="" style="width:50px"></td>
                                   <td>{{$tag->name}}</td>
                                   
-                                  <td>{{$tag->created_at}}</td>
+                                  <td>{{GetFormatedDate($tag->created_at)}}</td>
                                   <td>
                                       @if($tag->status == 1)
                                       <a class="btn-sm btn-success text-white">Active</a>

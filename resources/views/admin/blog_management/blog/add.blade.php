@@ -237,6 +237,12 @@
             },
             image: {
                 required: true,
+            },
+            body: {
+                required: true,
+            },
+            short_desc: {
+                required: true,
             }
         },
         messages: {
@@ -257,6 +263,12 @@
             },
             image: {
                 required: "Please select an image.",
+            },
+            body: {
+                required: "Please write content.",
+            },
+            short_desc: {
+                required: "Please write short content.",
             }
         },
         errorClass: 'text-danger',

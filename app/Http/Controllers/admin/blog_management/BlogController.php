@@ -33,7 +33,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        $categories = Category::where([['parent_id','!=',0],['type','blog'],['status',1]])->get();
+        $categories = Category::where([['type','blog'],['status',1]])->get();
 
         $tags = Tag::where('status',1)->get();
 
@@ -96,7 +96,7 @@ class BlogController extends Controller
     {
         $blog = Blog::with('tags','categories')->where('id',$id)->first();
         $tags = Tag::where('status',1)->get();
-        $categories = Category::where([['parent_id','!=',0],['type','blog'],['status',1]])->get();
+        $categories = Category::where([['type','blog'],['status',1]])->get();
         $authors = Author::where('status',1)->get();
 
         return view('admin.blog_management.blog.edit',compact('blog','tags','categories','authors'));

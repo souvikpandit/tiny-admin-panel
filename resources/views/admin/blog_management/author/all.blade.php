@@ -49,7 +49,7 @@
                                   <td><img src="{{ asset(GetImageUrl($author->image)) }}" alt="" style="width:50px"></td>
                                   <td>{{$author->name}}</td>
                                   
-                                  <td>{{$author->created_at}}</td>
+                                  <td>{{GetFormatedDate($author->created_at)}}</td>
                                   <td>
                                       @if($author->status == 1)
                                       <a class="btn-sm btn-success text-white">Active</a>

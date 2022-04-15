@@ -60,7 +60,7 @@
                                             @endif
                                         @endforeach
                                   </td>
-                                  <td>{{$blog->created_at}}</td>
+                                  <td>{{GetFormatedDate($blog->created_at)}}</td>
                                   <td>
                                       @if($blog->status == 1)
                                       <a class="btn-sm btn-success text-white">Active</a>
