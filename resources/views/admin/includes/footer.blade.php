@@ -2,7 +2,7 @@
     
     
     <script src="{{ asset('backend/js/jquery.min.js') }}"></script>
-    <script src="https://cdn.ckeditor.com/4.17.1/full/ckeditor.js"></script>
+    <script src="{{  a }}sset('backend/js/ckeditor/ckeditor.js') }}"></script>
     <script src="{{ asset('backend/js/ckfinder/ckfinder.js') }}"></script>
     <script src="{{ asset('backend/js/popper.min.js') }}"></script>
     <script src="{{ asset('backend/js/moment.min.js') }}"></script>
@@ -67,7 +67,7 @@
     <script src='{{ asset('backend/js/jquery.timepicker.js') }}'></script>
     <script src='{{ asset('backend/js/quill.min.js') }}'></script>
     
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script> --}}
+    
     <script>
       $('.select2').select2(
       {
@@ -379,12 +379,12 @@ if(document.getElementById("parmalink")!=null){
 </script>
 
 <!-- Datatable -->
-<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/2.2.7/js/responsive.bootstrap4.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/Talv/x-editable@develop/dist/bootstrap4-editable/js/bootstrap-editable.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-confirmation/1.0.5/bootstrap-confirmation.min.js"></script>
+<script src="{{ asset('backend/js/datatable/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('backend/js/datatable/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('backend/js/datatable/dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset('backend/js/datatable/responsive.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('backend/js/datatable/bootstrap-editable.min.js') }}"></script>
+<script src="{{ asset('backend/js/datatable/bootstrap-confirmation.min.js') }}"></script>
 <script>
 		$(document).ready(function () {
             $.ajaxSetup({
