@@ -44,7 +44,7 @@
                                   <td><input type="checkbox" class="sub_chk" data-id="{{$page->id}}"></td>
                                   <td>{{$page->name}}</td>
                                   
-                                  <td>{{$page->created_at}}</td>
+                                  <td>{{GetFormatedDate($page->created_at)}}</td>
                                   <td>
                                       @if($page->status == 1)
                                       <a class="btn-sm btn-success text-white">Active</a>

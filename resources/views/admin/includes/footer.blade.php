@@ -2,7 +2,7 @@
     
     
     <script src="{{ asset('backend/js/jquery.min.js') }}"></script>
-    <script src="{{  a }}sset('backend/js/ckeditor/ckeditor.js') }}"></script>
+    <script src="https://cdn.ckeditor.com/4.17.1/full/ckeditor.js"></script>
     <script src="{{ asset('backend/js/ckfinder/ckfinder.js') }}"></script>
     <script src="{{ asset('backend/js/popper.min.js') }}"></script>
     <script src="{{ asset('backend/js/moment.min.js') }}"></script>
@@ -67,7 +67,7 @@
     <script src='{{ asset('backend/js/jquery.timepicker.js') }}'></script>
     <script src='{{ asset('backend/js/quill.min.js') }}'></script>
     
-    
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script> --}}
     <script>
       $('.select2').select2(
       {

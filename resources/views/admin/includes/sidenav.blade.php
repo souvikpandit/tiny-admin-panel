@@ -101,7 +101,7 @@
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
               <a href="#category" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-box fe-16"></i>
+                <i class="fe fe-align-center"></i>
                 <span class="ml-3 item-text">Category</span>
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="category">
@@ -119,7 +119,7 @@
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
               <a href="#author" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-box fe-16"></i>
+                <i class="fe fe-users"></i>
                 <span class="ml-3 item-text">Author</span>
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="author">
@@ -137,7 +137,7 @@
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
               <a href="#cover-artist" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-box fe-16"></i>
+                <i class="fe fe-printer"></i>
                 <span class="ml-3 item-text">Cover Artist</span>
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="cover-artist">
@@ -155,7 +155,7 @@
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
               <a href="#book" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-box fe-16"></i>
+                <i class="fa fa-book"></i>
                 <span class="ml-3 item-text">Book</span>
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="book">
@@ -176,7 +176,7 @@
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
               <a href="#blog-category" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-box fe-16"></i>
+                <i class="fe fe-list fe-16"></i>
                 <span class="ml-3 item-text">Category</span>
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="blog-category">
@@ -194,7 +194,7 @@
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
               <a href="#blog-tags" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-box fe-16"></i>
+                <i class="fe fe-tag fe-16"></i>
                 <span class="ml-3 item-text">Tags</span>
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="blog-tags">
@@ -212,7 +212,8 @@
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
               <a href="#blog" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-box fe-16"></i>
+                
+                <i class="fa-solid fa-blog"></i>
                 <span class="ml-3 item-text">Blog</span>
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="blog">
@@ -230,7 +231,7 @@
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
               <a href="#blog-comment" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-box fe-16"></i>
+                <i class="fa fa-comment" aria-hidden="true"></i>
                 <span class="ml-3 item-text">Comment</span>
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="blog-comment">
@@ -251,7 +252,7 @@
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
               <a href="#partners" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-box fe-16"></i>
+                <i class="fa fa-handshake" aria-hidden="true"></i>
                 <span class="ml-3 item-text">Partners</span>
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="partners">
@@ -269,7 +270,7 @@
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
               <a href="#Advertisement" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-box fe-16"></i>
+                <i class="fas fa-ad"></i>
                 <span class="ml-3 item-text">Advertisement</span>
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="Advertisement">
@@ -290,7 +291,7 @@
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
               <a href="#role" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-box fe-16"></i>
+                <i class="fa fa-tasks" aria-hidden="true"></i>
                 <span class="ml-3 item-text">Role</span>
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="role">
@@ -308,7 +309,7 @@
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
               <a href="#permission" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-box fe-16"></i>
+                <i class="fa fa-lock" aria-hidden="true"></i>
                 <span class="ml-3 item-text">Permission</span>
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="permission">
@@ -326,7 +327,7 @@
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
               <a href="#user" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-box fe-16"></i>
+                <i class="fe fe-user fe-16"></i>
                 <span class="ml-3 item-text">User</span>
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="user">
@@ -344,7 +345,7 @@
           <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item dropdown">
               <a href="#menu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                <i class="fe fe-box fe-16"></i>
+                <i class="fa fa-bars" aria-hidden="true"></i>
                 <span class="ml-3 item-text">Menu</span>
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="menu">

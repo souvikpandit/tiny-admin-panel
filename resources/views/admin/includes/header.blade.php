@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{ asset('backend/css/style.css') }}">
     <!-- Date Range Picker CSS -->
     <link rel="stylesheet" href="{{ asset('backend/css/daterangepicker.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/css/cloudflare.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!-- App CSS -->
     <link rel="stylesheet" href="{{ asset('backend/css/app-light.css') }}" id="lightTheme">
     <link rel="stylesheet" href="{{ asset('backend/css/app-dark.css') }}" id="darkTheme" disabled="">

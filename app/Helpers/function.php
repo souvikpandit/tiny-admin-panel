@@ -74,7 +74,10 @@ function notFound(){
         return response()
                 ->view('errors.404');
     }
-
+function GetFormatedDate($date = NULL){
+  $formated_date = $date->format('d-M-Y');
+  return $formated_date;
+}
 
 
 ?>

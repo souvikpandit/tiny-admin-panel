@@ -1,10 +1,10 @@
 @extends('admin.layout.app')
 @section('main-content')
 @php
+if ($result) {
     $site_settings = json_decode($result->site_settings_meta);
     $meta_content = settings();
-    //var_dump($meta_content->meta_title);
-    //exit();
+}
 @endphp
 <main role="main" class="main-content">
         <div class="container-fluid">
@@ -63,8 +63,8 @@
                                                 <div class="mb-4 position-relative">
                                                     <a class="removeprev" style="display: none;" onclick="removeImageSelection('logo1','logo_preview_image1','logo_rmvbtn1')" id="logo_rmvbtn1" href="javascript:void(0);">x</a>
 
-                                                    <img src="{{ GetImageUrl($site_settings->logo_1) }}" alt="" id="logo_preview_image1" class="img-thumbnail" style="display:{{ ($site_settings->logo_1!=null) ? 'block' : 'none' }};">
-                                                    <input type="hidden" id="logo1" name="Meta[logo_1]" value="{{ $site_settings->logo_1 }}">
+                                                    <img src="{{ !empty($site_settings) ? GetImageUrl($site_settings->logo_1) : '' }}" alt="" id="logo_preview_image1" class="img-thumbnail" style="display:{{ (!empty($site_settings) && $site_settings->logo_1!=null) ? 'block' : 'none' }};">
+                                                    <input type="hidden" id="logo1" name="Meta[logo_1]" value="{{ $site_settings->logo_1 ?? '' }}">
                                                     <a onclick="Media('logo1', 'logo_preview_image1','logo_rmvbtn1');" class="btn btn-oval btn-primary btn-block mt-2" href="#">Insert Image</a>
                                                 </div>
                                             </div>
@@ -88,8 +88,8 @@
                                             <div class="form-group">
                                                 <div class="mb-4 position-relative">
                                                     <a class="removeprev" style="display: none;" onclick="removeImageSelection('logo2','logo_preview_image2','logo_rmvbtn2')" id="logo_rmvbtn2" href="javascript:void(0);">x</a>
-                                                    <img src="{{ GetImageUrl($site_settings->logo_2) }}" alt="" id="logo_preview_image2" class="img-thumbnail" style="display:{{ ($site_settings->logo_2!=null) ? 'block' : 'none' }};">
-                                                    <input type="hidden" id="logo2" name="Meta[logo_2]" value="{{ $site_settings->logo_2 }}">
+                                                    <img src="{{ !empty($site_settings) ? GetImageUrl($site_settings->logo_2) : '' }}" alt="" id="logo_preview_image2" class="img-thumbnail" style="display:{{ (!empty($site_settings) && $site_settings->logo_2!=null) ? 'block' : 'none' }};">
+                                                    <input type="hidden" id="logo2" name="Meta[logo_2]" value="{{ $site_settings->logo_2 ?? '' }}">
                                                     <a onclick="Media('logo2', 'logo_preview_image2','logo_rmvbtn2');" class="btn btn-oval btn-primary btn-block mt-2" href="#">Insert Image</a>
                                                 </div>
                                             </div>
