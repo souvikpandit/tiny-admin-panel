@@ -50,7 +50,8 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //return $request;
+        // var_dump(json_encode($request->BlogSeo));
+        // return $request;
         $blog = new Blog;
 
         $blog->image = $request->image;
@@ -62,6 +63,7 @@ class BlogController extends Controller
         $blog->status = $request->status;
         $blog->comment_status = $request->comment_status;
         $blog->show_image = $request->show_image;
+        $blog->blog_meta = json_encode($request->BlogSeo);
         $blog->save();
         $blog->tags()->sync($request->tags);
         $blog->categories()->sync($request->categories);
@@ -122,6 +124,7 @@ class BlogController extends Controller
         $blog->status = $request->status;
         $blog->show_image = $request->show_image;
         $blog->comment_status = $request->comment_status;
+        $blog->blog_meta = json_encode($request->BlogSeo);
         $blog->tags()->sync($request->tags);
         $blog->categories()->sync($request->categories);
 

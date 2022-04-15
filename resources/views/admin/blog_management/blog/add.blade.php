@@ -96,13 +96,48 @@
                             </div>
                         </div>
                     </div>
-                </div>              
-                                          
+                </div>      
+                <hr>        
+                <div class="col-xl-12 col-lg-12 col-md-12">
+                    <div class="tile mb30">                        
+                        <div class="tile-title-w-btn">
+                            <div class="title mt-2 mb-2">
+                                <h3><i class="fas fa-chart-line"></i> SEO Setting</h3>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="metaDefaultCheck" checked> Use Default Seo Setting
+
+                                <input type="hidden" value="1" id="metaDefaultValue" name="BlogSeo[metadefault]" />
+                            </div>    
+                        </div>
+                        <div class="tile-content">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group"><label for="inputSearch">Meta Title</label><input type="text" class="form-control" id="MetaTitleField" name="BlogSeo[meta_title]" oninput="metaTitle()"></div>
+                                    <div style="margin:5px 0px;">
+                                            <input type="text" class="form-control" style="width:50px; margin:5px 0px; display:inline;" id="metaTitleCharCount" value="0" disabled>   characters. Most search engines use a maximum of 57 chars for the meta title.
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group"><label for="inputSearch">Meta Description</label>
+                                        <textarea name="BlogSeo[meta_description]" id="MetaDescField" rows=3 class="form-control" oninput="metaDesc()" data-editor="noeditor"></textarea>
+                                    </div>
+                                    <div style="margin:5px 0px;" >
+                                            <input type="text" class="form-control" style="width:50px; margin:5px 0px; display:inline;" id="metaDescriptionCharCount" value="0" disabled>   characters. Most search engines use a maximum of 160 chars for the meta description
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group"><label for="inputSearch">Meta Keywords (Comma separated)</label><input type="text" class="form-control" name="BlogSeo[meta_keyword]" placeholder="" ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                        
                 
-            </div> <!-- .card-body -->
+            </div> <!-- card-body -->
         </div>           
     </div>    
-        
+    
     <div class="col-xl-4 col-lg-4 col-md-4 ">
         <div class="sticky">
             <div class="card shadow mb-4">
