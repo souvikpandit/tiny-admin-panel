@@ -106,11 +106,11 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="category">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="ui-color.php"><span class="ml-1 item-text">All</span>
+                  <a class="nav-link pl-3" href="{{ route('book-category.index') }}"><span class="ml-1 item-text">All</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="ui-typograpy.php"><span class="ml-1 item-text">Add</span></a>
+                  <a class="nav-link pl-3" href="{{ route('book-category.create') }}"><span class="ml-1 item-text">Add</span></a>
                 </li>
               </ul>
             </li>
@@ -124,11 +124,11 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="author">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="ui-color.php"><span class="ml-1 item-text">All</span>
+                  <a class="nav-link pl-3" href="{{ route('author.index') }}"><span class="ml-1 item-text">All</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="ui-typograpy.php"><span class="ml-1 item-text">Add</span></a>
+                  <a class="nav-link pl-3" href="{{ route('author.create') }}"><span class="ml-1 item-text">Add</span></a>
                 </li>
               </ul>
             </li>
