@@ -63,7 +63,7 @@
                                         @endforeach
                                     @endif
                                   </td>
-                                  <td>{{$category->created_at}}</td>
+                                  <td>{{GetFormatedDate($category->created_at)}}</td>
                                   <td>
                                       @if($category->status == 1)
                                       <a class="btn-sm btn-success text-white">Active</a>
