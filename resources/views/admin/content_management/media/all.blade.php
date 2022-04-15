@@ -26,6 +26,7 @@
                             <th style="width:5%" class="no-sort"><input type="checkbox" id="master"></th>
                             <th class="no-sort">Image</th>
                             <th>Url</th>
+                            <th>Date</th>
                             <th>Alt Tag</th>
                             <th>Status</th>
                             <th style="width:15%;">Action</th>
@@ -38,7 +39,7 @@
                             <td><input type="checkbox" class="sub_chk" data-id="{{$media->id}}"></td>
                             <td><img style="width:50px;" src="{{ asset('storage/media/'.$media->name) }}" class="img-thumbnail"></td>
                             <td><p style="display:none;" id="td_{{$media->id}}">{{ asset('storage/media/'.$media->name) }}<p><button class="btn mb-2 btn-outline-secondary" onclick="copyToClipboard('#td_{{$media->id}}')"><span class="fe fe-arrow-down fe-16 mr-2"></span>Copy URL</button></td>
-                            
+                            <td>{{GetFormatedDate($media->created_at)}}</td>
                             <td>
                             <a href="#" class="xedit" data-pk="{{$media->id}}" data-name="alt_tag">{{$media->alt_tag}}</a>
                             </td>

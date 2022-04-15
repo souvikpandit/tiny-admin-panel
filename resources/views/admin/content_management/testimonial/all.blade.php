@@ -52,7 +52,7 @@
                                   <td><img src="{{ asset(GetImageUrl($testimonial->Meta('mobile_testimonial'))) }}" alt="" style="width:50px"></td>
                                   <td>{{$testimonial->name}}</td>
                                   <td>{!! $testimonial->content !!}</td>
-                                  <td>{{$testimonial->created_at}}</td>
+                                  <td>{{GetFormatedDate($testimonial->created_at)}}</td>
                                   <td>
                                       @if($testimonial->status == 1)
                                       <a class="btn-sm btn-success text-white">Active</a>

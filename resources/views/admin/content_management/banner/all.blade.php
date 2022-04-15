@@ -52,7 +52,7 @@
                                   <td><img src="{{ asset(GetImageUrl($banner->Meta('mobile_banner'))) }}" alt="" style="width:50px"></td>
                                   <td>{{$banner->name}}</td>
                                   <td>{!! $banner->content !!}</td>
-                                  <td>{{$banner->created_at}}</td>
+                                  <td>{{ GetFormatedDate($banner->created_at)}}</td>
                                   <td>
                                       @if($banner->status == 1)
                                       <a class="btn-sm btn-success text-white">Active</a>
