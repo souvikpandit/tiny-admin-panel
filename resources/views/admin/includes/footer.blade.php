@@ -8,8 +8,8 @@
     <script src="{{ asset('backend/js/moment.min.js') }}"></script>
     <script src="{{ asset('backend/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('backend/js/simplebar.min.js') }}"></script>
-    <script src='{{ asset('backend/js/daterangepicker.js') }}'></script>
-    <script src='{{ asset('backend/js/jquery.stickOnScroll.js') }}'></script>
+    <script src="{{ asset('backend/js/daterangepicker.js') }}"></script>
+    <script src="{{ asset('backend/js/jquery.stickOnScroll.js') }}"></script>
     <script src="{{ asset('backend/js/tinycolor-min.js') }}"></script>
     <script src="{{ asset('backend/js/config.js') }}"></script>
     <script src="{{ asset('backend/js/d3.min.js') }}"></script>
@@ -60,15 +60,15 @@
     <script src="{{ asset('backend/js/jquery.sparkline.min.js') }}"></script>
     <script src="{{ asset('backend/js/apexcharts.min.js') }}"></script>
     <script src="{{ asset('backend/js/apexcharts.custom.js') }}"></script>
-    <script src='{{ asset('backend/js/jquery.mask.min.js') }}'></script>
-    <script src='{{ asset('backend/js/select2.min.js') }}'></script>
-    <script src='{{ asset('backend/js/jquery.steps.min.js') }}'></script>
-    <script src='{{ asset('backend/js/jquery.validate.min.js') }}'></script>
-    <script src='{{ asset('backend/js/jquery.timepicker.js') }}'></script>
-    <script src='{{ asset('backend/js/quill.min.js') }}'></script>
+    <script src="{{ asset('backend/js/jquery.mask.min.js') }}"></script>
+    <script src="{{ asset('backend/js/select2.min.js') }}"></script>
+    <script src="{{ asset('backend/js/jquery.steps.min.js') }}"></script>
+    <script src="{{ asset('backend/js/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('backend/js/jquery.timepicker.js') }}"></script>
+    <script src="{{ asset('backend/js/quill.min.js') }}"></script>
     
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script> --}}
-    <script>
+    {{--  <script>
       $('.select2').select2(
       {
         theme: 'bootstrap4',
@@ -78,6 +78,8 @@
         multiple: true,
         theme: 'bootstrap4',
       });
+    </script>  --}}
+    <script>
       $('.drgpicker').daterangepicker(
       {
         singleDatePicker: true,

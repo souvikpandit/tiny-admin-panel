@@ -181,11 +181,11 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="blog-category">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="ui-color.php"><span class="ml-1 item-text">All</span>
+                  <a class="nav-link pl-3" href="{{ route('category.index') }}"><span class="ml-1 item-text">All</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="ui-typograpy.php"><span class="ml-1 item-text">Add</span></a>
+                  <a class="nav-link pl-3" href="{{ route('category.create') }}"><span class="ml-1 item-text">Add</span></a>
                 </li>
               </ul>
             </li>
@@ -199,11 +199,29 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="blog-tags">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="ui-color.php"><span class="ml-1 item-text">All</span>
+                  <a class="nav-link pl-3" href="{{ route('tag.index') }}"><span class="ml-1 item-text">All</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="ui-typograpy.php"><span class="ml-1 item-text">Add</span></a>
+                  <a class="nav-link pl-3" href="{{ route('tag.create') }}"><span class="ml-1 item-text">Add</span></a>
+                </li>
+              </ul>
+            </li>
+            
+          </ul>
+          <ul class="navbar-nav flex-fill w-100 mb-2">
+            <li class="nav-item dropdown">
+              <a href="#author" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                <i class="fe fe-box fe-16"></i>
+                <span class="ml-3 item-text">Author</span>
+              </a>
+              <ul class="collapse list-unstyled pl-4 w-100" id="author">
+                <li class="nav-item">
+                  <a class="nav-link pl-3" href="{{ route('tag.index') }}"><span class="ml-1 item-text">All</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pl-3" href="{{ route('author.create') }}"><span class="ml-1 item-text">Add</span></a>
                 </li>
               </ul>
             </li>
@@ -217,11 +235,11 @@
               </a>
               <ul class="collapse list-unstyled pl-4 w-100" id="blog">
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="ui-color.php"><span class="ml-1 item-text">All</span>
+                  <a class="nav-link pl-3" href="{{ route('blog.index') }}"><span class="ml-1 item-text">All</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link pl-3" href="ui-typograpy.php"><span class="ml-1 item-text">Add</span></a>
+                  <a class="nav-link pl-3" href="{{ route('blog.create') }}"><span class="ml-1 item-text">Add</span></a>
                 </li>
               </ul>
             </li>

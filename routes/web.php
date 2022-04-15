@@ -7,6 +7,10 @@ use App\Http\Controllers\admin\content_management\MediaController;
 use App\Http\Controllers\admin\content_management\BannerController;
 use App\Http\Controllers\admin\content_management\SiteSettingController;
 use App\Http\Controllers\admin\content_management\TestimonialController;
+use App\Http\Controllers\admin\blog_management\BlogController;
+use App\Http\Controllers\admin\blog_management\CategoryController;
+use App\Http\Controllers\admin\blog_management\TagController;
+use App\Http\Controllers\admin\blog_management\AuthorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +27,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('welcome');
 })->name('dashboard');
 
 
@@ -75,7 +79,21 @@ Route::get('/demo', function () {
         Route::post('/testimonial/delete/{id}', [TestimonialController::class, 'destroy'])->name('testimonial.destroy');
         Route::delete('/testimonialDeleteAll',[TestimonialController::class, 'alldelete'])->name('testimonialDeleteAll');
         
-    
+        /* Blog management */
+        Route::resource('blog', BlogController::class);
+        Route::delete('/blogDeleteAll',[BlogController::class, 'alldelete'])->name('blogDeleteAll');
+
+        /* Category management */
+        Route::resource('category', CategoryController::class);
+        Route::delete('/categoryDeleteAll',[CategoryController::class, 'alldelete'])->name('categoryDeleteAll');
+
+        /* Tag management */
+        Route::resource('tag', TagController::class);
+        Route::delete('/tagDeleteAll',[TagController::class, 'alldelete'])->name('tagDeleteAll');
+
+        /* Author management */
+        Route::resource('author', AuthorController::class);
+        Route::delete('/authorDeleteAll',[AuthorController::class, 'alldelete'])->name('authorDeleteAll');
         /* CMS */
 
 /* Admin Routing */
